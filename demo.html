@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meghana | Premium Freelance Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;padding:0;box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0f17;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+position:fixed;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(10,15,25,0.7);
+backdrop-filter:blur(14px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+nav h2{
+background:linear-gradient(45deg,#00f5ff,#8b5cf6);
+-webkit-background-clip:text;
+color:transparent;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#cbd5e1;
+font-size:15px;
+}
+
+nav a:hover{color:#00f5ff}
+
+/* ===== HERO ===== */
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+background:radial-gradient(circle at 20% 30%,#1e293b,transparent),
+radial-gradient(circle at 80% 70%,#312e81,transparent),
+#020617;
+}
+
+.hero h1{
+font-size:3.5rem;
+line-height:1.2;
+}
+
+.gradient{
+background:linear-gradient(45deg,#00f5ff,#8b5cf6);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+margin-top:18px;
+max-width:650px;
+color:#94a3b8;
+}
+
+.cta{
+margin-top:30px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:14px 32px;
+border:none;
+border-radius:40px;
+font-weight:600;
+cursor:pointer;
+font-size:15px;
+transition:.3s;
+}
+
+.primary{
+background:linear-gradient(45deg,#00f5ff,#8b5cf6);
+color:#000;
+}
+
+.secondary{
+background:transparent;
+border:1px solid #334155;
+color:#fff;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(0,255,255,0.2);
+}
+
+/* ===== SECTION ===== */
+section{padding:100px 8%}
+h2{font-size:2.2rem;text-align:center}
+
+/* ===== SERVICES ===== */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.card{
+background:rgba(255,255,255,0.03);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.05);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+border:1px solid #00f5ff;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* ===== SKILLS ===== */
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+margin-top:40px;
+}
+
+.skill{
+padding:12px 20px;
+border-radius:30px;
+background:#111827;
+border:1px solid #1f2937;
+}
+
+/* ===== PROJECT ===== */
+.project{
+background:#0f172a;
+padding:25px;
+border-radius:18px;
+transition:.4s;
+}
+.project:hover{
+transform:scale(1.04);
+border:1px solid #8b5cf6;
+}
+
+/* ===== CONTACT ===== */
+.contact-box{
+max-width:600px;
+margin:auto;
+margin-top:40px;
+background:#0f172a;
+padding:40px;
+border-radius:20px;
+}
+
+input,textarea{
+width:100%;
+margin-top:15px;
+padding:14px;
+border-radius:10px;
+border:none;
+background:#020617;
+color:#fff;
+}
+
+/* ===== FOOTER ===== */
+footer{
+text-align:center;
+padding:25px;
+margin-top:40px;
+background:#020617;
+color:#64748b;
+}
+
+/* ===== FLOAT BUTTON ===== */
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+padding:16px;
+border-radius:50%;
+font-size:22px;
+color:#fff;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.hero h1{font-size:2.2rem}
+nav ul{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+<h2>Meghana.dev</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h1>Building <span class="gradient">Modern Websites</span><br>that bring clients & growth</h1>
+
+<p>Freelance Full-Stack Developer specializing in premium websites, React apps and modern UI that help businesses grow online.</p>
+
+<div class="cta">
+<button class="btn primary" onclick="scrollContact()">Hire Me</button>
+<button class="btn secondary" onclick="scrollProjects()">View Work</button>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>💼 Services</h2>
+<div class="grid">
+<div class="card"><h3>🌐 Business Websites</h3><p>Modern responsive websites for brands & startups.</p></div>
+<div class="card"><h3>💻 Portfolio for Clients</h3><p>Portfolio that gets jobs & freelance leads.</p></div>
+<div class="card"><h3>⚡ Full Stack Apps</h3><p>React, Node, MongoDB scalable apps.</p></div>
+<div class="card"><h3>🎨 UI/UX Design</h3><p>Premium modern interface design.</p></div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>🚀 Skills</h2>
+<div class="skills">
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">React</span>
+<span class="skill">Node.js</span>
+<span class="skill">MongoDB</span>
+<span class="skill">Java</span>
+<span class="skill">Blockchain</span>
+<span class="skill">Git</span>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>🔥 Featured Work</h2>
+<div class="grid">
+<div class="project"><h3>GreenVolt Full Stack App</h3><p>React + TypeScript + PostgreSQL web app.</p></div>
+<div class="project"><h3>Blockchain Medical System</h3><p>Secure EMR using Ethereum smart contracts.</p></div>
+<div class="project"><h3>Client Portfolio Websites</h3><p>Modern portfolios for students & professionals.</p></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>📞 Let's Work Together</h2>
+<div class="contact-box">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Tell me about your project"></textarea>
+<button class="btn primary" style="width:100%;margin-top:15px" onclick="msg()">Send Message</button>
+</div>
+</section>
+
+<footer>
+© 2026 Meghana | Premium Freelance Developer
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919110645580" target="_blank">💬</a>
+
+<script>
+function scrollContact(){document.getElementById("contact").scrollIntoView({behavior:"smooth"})}
+function scrollProjects(){document.getElementById("projects").scrollIntoView({behavior:"smooth"})}
+function msg(){alert("Message sent! Meghana will contact you soon 🚀")}
+</script>
+
+</body>
+</html>
